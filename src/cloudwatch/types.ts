@@ -11,3 +11,5 @@ export type TCloudWatchData = {
   logStreams?: any[];
   nextSequenceToken?: any;
 };
+
+export type TCloudWatchLogLevel = "info" | "warn" | "error";

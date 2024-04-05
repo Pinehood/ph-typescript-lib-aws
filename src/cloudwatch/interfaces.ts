@@ -1,15 +1,20 @@
 import { CloudWatchLogs } from "@aws-sdk/client-cloudwatch-logs";
+import { IAWSOptions } from "../shared";
+
+export interface ICloudWatchLoggerOptions {
+  logGroupName: string;
+  logStreamName: string;
+  aws?: IAWSOptions;
+  useChalk?: boolean;
+  batchSize?: number;
+}
 
 export interface ICloudWatchConstructorOptions {
   logGroupName: string;
   logStreamNamePrefix?: string;
   logStreamName?: string;
   objectMode?: boolean;
-  aws?: {
-    region: string;
-    accessKeyId: string;
-    secretAccessKey: string;
-  };
+  aws?: IAWSOptions;
 }
 
 export interface ICloudWatchOptions {
