@@ -1,0 +1,15 @@
+.github
+lib
+src
+.dockerignore
+.eslintignore
+.eslintrc.js
+.gitignore
+.husky
+.prettierignore
+.prettierrc
+index.ts
+nest-cli.json
+package-lock.json
+tsconfig.build.json
+tsconfig.json
