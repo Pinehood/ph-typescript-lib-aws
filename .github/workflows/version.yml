@@ -1,0 +1,29 @@
+name: NPM Version Upgrade
+on:
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    types: [completed]
+jobs:
+  publish:
+    name: Upgrade Package Version
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.ref_name == 'main' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+          cache: "npm"
+      - name: Git Configuration
+        run: |
+          git config --global user.email "$EMAIL"
+          git config --global user.name "$USERNAME"
+        env:
+          EMAIL: ${{ vars.GH_EMAIL }}
+          USERNAME: ${{ vars.GH_USERNAME }}
+      - name: Patch Version
+        run: npm version patch -m "NPM Version Upgrade"
+      - name: Git Push
+        run: git push

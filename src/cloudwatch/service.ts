@@ -6,7 +6,7 @@ import {
   InputLogEvent,
 } from "@aws-sdk/client-cloudwatch-logs";
 import util from "util";
-import { IService } from "../shared";
+import { IService } from "../utils";
 import { ICloudWatchLoggerOptions } from "./interfaces";
 import {
   CW_DEFAULT_BATCH_SIZE,

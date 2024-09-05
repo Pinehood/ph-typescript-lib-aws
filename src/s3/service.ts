@@ -2,13 +2,13 @@ import * as path from "node:path";
 import { randomUUID } from "node:crypto";
 import { Readable } from "node:stream";
 import { BucketCannedACL, ObjectCannedACL, S3 } from "@aws-sdk/client-s3";
+import { IService } from "../utils";
 import {
   IS3DownloadResponse,
   IS3File,
   IS3Options,
   IS3UploadResponse,
 } from "./interfaces";
-import { IService } from "../shared";
 
 export class S3Service implements IService<IS3Options, S3> {
   private readonly options: IS3Options;

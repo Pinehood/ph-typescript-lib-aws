@@ -1,2 +1,2 @@
 export * from "./interfaces";
-export * from "./redis.service";
+export * from "./service";

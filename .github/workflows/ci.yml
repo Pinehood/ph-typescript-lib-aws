@@ -1,0 +1,39 @@
+name: Continuous Integration
+on:
+  push:
+    branches: [main, develop]
+    paths_ignore:
+      [
+        "**.md",
+        ".env",
+        ".gitignore",
+        ".prettierrc",
+        ".prettierignore",
+        ".github/dependabot.yml",
+        ".github/lock.yml",
+        ".github/ISSUE_TEMPLATE/**",
+        ".github/PULL_REQUEST_TEMPLATE",
+      ]
+  pull_request:
+    branches: [develop]
+jobs:
+  integrate:
+    name: Install, Build & Lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'NPM Version Upgrade')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ vars.NODE_VERSION }}
+          cache: "npm"
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npm run build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
+      - name: Lint
+        run: npm run lint

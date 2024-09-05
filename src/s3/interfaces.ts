@@ -1,4 +1,4 @@
-import { IAWSOptions } from "../shared";
+import { IAWSOptions } from "../utils";
 
 export interface IS3Options {
   bucket: string;

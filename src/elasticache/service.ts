@@ -7,7 +7,7 @@ import IORedis, {
   RedisOptions,
   RedisValue,
 } from "ioredis";
-import { IService } from "../shared";
+import { IService } from "../utils";
 import { IElastiCacheRedisOptions } from "./interfaces";
 
 export class ElastiCacheRedisService

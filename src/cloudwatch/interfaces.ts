@@ -1,5 +1,5 @@
 import { CloudWatchLogs } from "@aws-sdk/client-cloudwatch-logs";
-import { IAWSOptions } from "../shared";
+import { IAWSOptions } from "../utils";
 
 export interface ICloudWatchLoggerOptions {
   logGroupName: string;
