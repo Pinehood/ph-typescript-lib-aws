@@ -1,6 +1,6 @@
 {
   "name": "ph-typescript-lib-aws",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "lint": "eslint \"./src/**/*.ts\"",
     "build": "npx tsc",
