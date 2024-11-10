@@ -7,8 +7,8 @@
     "debug": "node --inspect -r ts-node/register src/test.ts"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudwatch-logs": "^3.654.0",
-    "@aws-sdk/client-s3": "^3.654.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.687.0",
+    "@aws-sdk/client-s3": "^3.688.0",
     "async": "^3.2.6",
     "axios": "^1.7.7",
     "ioredis": "^5.4.1",
@@ -17,18 +17,18 @@
   },
   "devDependencies": {
     "@types/async": "^3.2.24",
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.5.5",
-    "@types/readable-stream": "^4.0.15",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
-    "eslint": "^8.57.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@types/readable-stream": "^4.0.18",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-ts-ph": "^1.0.7",
-    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-import": "^2.31.0",
     "prettier": "^3.3.3",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   }
 }
