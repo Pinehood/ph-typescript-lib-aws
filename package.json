@@ -16,6 +16,8 @@
     "readable-stream": "^4.5.2"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
     "@types/async": "^3.2.24",
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
